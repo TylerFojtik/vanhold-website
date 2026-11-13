@@ -112,9 +112,8 @@ p{margin:0}
 </header>
 <style>
 #hero{position:relative;overflow:hidden;background:var(--navy-deep);color:#fff;min-height:min(78vh,820px);display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
-#hero .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform-origin:60% 50%;animation:heroKB 28s ease-out both alternate infinite}
+#hero .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 #hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,var(--navy-deep) 0%,color-mix(in srgb,var(--navy-deep) 78%,transparent) 32%,color-mix(in srgb,var(--navy-deep) 20%,transparent) 68%,color-mix(in srgb,var(--navy-deep) 35%,transparent) 100%)}
-@keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.09)}}
 #hero .hero-body{padding-top:clamp(120px,22vh,240px);padding-bottom:clamp(28px,5vh,56px)}
 #hero .eyebrow{color:var(--ice);display:block;margin-bottom:18px}
 #hero h1{font-size:clamp(2.6rem,7.2vw,5rem);line-height:1.02;margin:0 0 20px;max-width:14ch;color:#fff;font-weight:500}
@@ -159,11 +158,11 @@ p{margin:0}
 #hard-sites .ap::before{content:"\2192\00a0";color:var(--accent)}
 @media(max-width:820px){#hard-sites .hs-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:520px){#hard-sites .pairs li{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){#hero .hero-img{animation:none}#capabilities .panel img{transition:none}#capabilities .panel:hover img{transform:none}#capabilities .track{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){#capabilities .panel img{transition:none}#capabilities .panel:hover img{transform:none}#capabilities .track{scroll-behavior:auto}}
 </style>
 
 <section id="hero" class="sec sec-hero">
-  <img class="hero-img" src="img/Summit61.jpg" alt="Aerial view of apartments beside the great lawn at Summit Park in Blue Ash, Ohio" width="1400" height="933" fetchpriority="high">
+  <img class="hero-img" src="img/Summit61.jpg" alt="Aerial view of apartments beside the great lawn at Summit Park in Blue Ash, Ohio" width="2000" height="1333" fetchpriority="high">
   <div class="wrap hero-body">
     <span class="eyebrow">Vandercar &middot; Real estate development</span>
     <h1>Difficult sites. Finished places.</h1>
@@ -192,7 +191,7 @@ p{margin:0}
     </div>
   </div>
   <div class="track" tabindex="0" role="region" aria-label="Asset types we develop">
-    <figure class="panel"><img src="img/Summit19.jpg" alt="Apartment buildings along the boardwalk at Summit Park" width="1400" height="933" loading="lazy"><figcaption><span class="num">01</span><h3>Multifamily</h3><p>Rental and for-sale residential woven into walkable districts, designed around the street, the park and the neighbors already there.</p></figcaption></figure>
+    <figure class="panel"><img src="img/Summit19.jpg" alt="Apartment buildings along the boardwalk at Summit Park" width="2000" height="1333" loading="lazy"><figcaption><span class="num">01</span><h3>Multifamily</h3><p>Rental and for-sale residential woven into walkable districts, designed around the street, the park and the neighbors already there.</p></figcaption></figure>
     <figure class="panel"><img src="img/cap-industrial.jpg" alt="Long-span distribution warehouse with truck docks" width="1400" height="820" loading="lazy" style="object-position:30% 50%"><figcaption><span class="num">02</span><h3>Industrial</h3><p>Headquarters, distribution and flex space on infill land, with the grading, utilities and access solved before a tenant signs.</p></figcaption></figure>
     <figure class="panel"><img src="img/cap-office.jpg" alt="Three-story Anthem office building" width="1400" height="933" loading="lazy" style="object-position:42% 50%"><figcaption><span class="num">03</span><h3>Office &amp; Commercial</h3><p>Class A office and build-to-suit space placed where it anchors a district, from corporate headquarters to the upper floors of a town center.</p></figcaption></figure>
     <figure class="panel"><img src="img/cap-retail.jpg" alt="Kroger Marketplace storefront" width="1400" height="933" loading="lazy" style="object-position:55% 50%"><figcaption><span class="num">04</span><h3>Retail</h3><p>Where the company began, with drug and grocery stores across New England. Today, restaurants and shops sited to draw foot traffic, not just cars.</p></figcaption></figure>
@@ -330,11 +329,11 @@ p{margin:0}
 <div class="stage" id="pj-stage">
 <div class="gal">
 <div class="track" id="pj-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Project photos">
-<figure><img src="img/Summit61.jpg" alt="Aerial of Summit Park apartments beside the great lawn" width="1400" height="933"></figure>
+<figure><img src="img/Summit61.jpg" alt="Aerial of Summit Park apartments beside the great lawn" width="2000" height="1333"></figure>
 <figure><img src="img/approach.jpg" alt="Aerial of the Approach mixed-use building at Summit Park" width="1400" height="1049" loading="lazy"></figure>
-<figure><img src="img/Summit19.jpg" alt="Boardwalk and apartment buildings with the observation tower" width="1400" height="933" loading="lazy"></figure>
-<figure><img src="img/Summit40.jpg" alt="Summit Park, Blue Ash" width="1400" height="933" loading="lazy"></figure>
-<figure><img src="img/Summit50.jpg" alt="Summit Park, Blue Ash" width="1400" height="933" loading="lazy"></figure>
+<figure><img src="img/Summit19.jpg" alt="Boardwalk and apartment buildings with the observation tower" width="2000" height="1333" loading="lazy"></figure>
+<figure><img src="img/Summit40.jpg" alt="Summit Park, Blue Ash" width="2000" height="1333" loading="lazy"></figure>
+<figure><img src="img/Summit50.jpg" alt="Summit Park, Blue Ash" width="2000" height="1333" loading="lazy"></figure>
 <figure><img src="img/aerial.jpg" alt="Satellite view of the Summit Park district" width="1400" height="948" loading="lazy"></figure>
 </div>
 <button class="arrow prev" id="pj-ap" type="button" aria-label="Previous photo">&larr;</button>
