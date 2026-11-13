@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vandercar | Real estate development, Cincinnati</title>
+<meta name="description" content="Vandercar develops multifamily, industrial, office, retail and mixed-use projects in Greater Cincinnati, specializing in the difficult sites other developers pass over.">
+<link rel="canonical" href="https://www.vanhold.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.vanhold.com/">
+<meta property="og:title" content="Vandercar | Difficult sites. Finished places.">
+<meta property="og:description" content="Real estate development across the asset spectrum, specializing in the sites other developers pass over.">
+<meta property="og:image" content="https://www.vanhold.com/img/Summit61.jpg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout concept: full-bleed photography bands alternating with airy, rule-divided editorial text; navy brand blues carry the accents, neutrals are blue-biased. */
+:root{
+  --navy:#1D5285; --navy-deep:#022340; --blue:#0367A6; --sky:#00A0DD; --ice:#8FB9DD;
+  --bg:#F7F9FB; --bg-alt:#EDF2F6; --surface:#FFFFFF; --fg:#13222F; --fg-muted:#5B6B7A; --line:#D5DEE6;
+  --accent:#0367A6; --accent-ink:#FFFFFF; --logo-ink:#0B4A8B; --on-dark:#F3F7FA; --on-dark-muted:#B9C8D6;
+  --font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --font-brand:'Cinzel',Georgia,serif;
+  --font-body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --radius:4px; --ease:cubic-bezier(.2,.7,.2,1); --nav-h:68px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0B1620; --bg-alt:#101E2B; --surface:#152636; --fg:#E9EFF4; --fg-muted:#9FB0BF; --line:#24374A;
+  --accent:#00A0DD; --accent-ink:#04121C; --logo-ink:#FFFFFF; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --bg:#0B1620; --bg-alt:#101E2B; --surface:#152636; --fg:#E9EFF4; --fg-muted:#9FB0BF; --line:#24374A;
+  --accent:#00A0DD; --accent-ink:#04121C; --logo-ink:#FFFFFF; color-scheme:dark; }
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,6vw,5rem)}
+h2{font-size:clamp(2rem,4.2vw,3.4rem)}
+h3{font-size:clamp(1.4rem,2.2vw,1.9rem)}
+p{margin:0}
+.wrap{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sec{padding-block:clamp(4rem,9vw,8rem)}
+.eyebrow{font-family:var(--font-brand);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+.lede{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--fg-muted);max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-body);font-weight:600;font-size:.95rem;letter-spacing:.02em;padding:.85rem 1.4rem;border-radius:var(--radius);border:1px solid var(--line);background:transparent;color:inherit;text-decoration:none;cursor:pointer;transition:background .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn-ghost{border-color:currentColor}
+.btn-ghost:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .js .reveal{opacity:1;transform:none;transition:none} }
+
+/* Nav */
+#nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;height:var(--nav-h);display:flex;align-items:center;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s var(--ease),background .3s var(--ease)}
+#nav.scrolled{border-bottom-color:var(--line)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%}
+/* Logo: the cube keeps its printed blues; the wordmark is the PNG's alpha used as a mask, filled with --logo-ink so it reads in both themes. Source art is 1420x200. */
+.vc-logo{display:inline-flex;align-items:center;height:var(--lh,28px);color:var(--logo-ink);text-decoration:none;flex:none}
+.vc-logo i{display:block;height:var(--lh,28px)}
+.vc-logo .cube{width:calc(var(--lh,28px) * 1.125);background:url(img/logo.png) 0 0 / auto 100% no-repeat}
+.vc-logo .word{width:calc(var(--lh,28px) * 5.75);background:currentColor;-webkit-mask:url(img/logo.png) calc(var(--lh,28px) * -1.35) 0 / auto 100% no-repeat;mask:url(img/logo.png) calc(var(--lh,28px) * -1.35) 0 / auto 100% no-repeat}
+#nav .logo{--lh:28px;height:36px}
+#nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2rem;align-items:center}
+#nav ul a{text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.03em;color:var(--fg-muted);position:relative;padding:.3rem 0}
+#nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+#nav ul a:hover::after,#nav ul a.active::after{transform:scaleX(1)}
+#nav ul a.active{color:var(--fg)}
+#nav .cta{font-size:.85rem;padding:.6rem 1rem}
+#nav .burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;color:var(--fg);padding:0}
+#nav .burger span{display:block;width:22px;height:2px;background:currentColor;margin:5px auto;transition:transform .3s var(--ease),opacity .3s}
+@media (max-width:860px){
+  #nav ul,#nav .cta{display:none}
+  #nav .burger{display:block}
+  #nav.open ul{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:1rem max(16px,env(safe-area-inset-left,0px)) 1.5rem;gap:1.2rem;align-items:flex-start}
+  #nav.open ul a{font-size:1.1rem}
+  #nav.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #nav.open .burger span:nth-child(2){opacity:0}
+  #nav.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<header id="nav">
+  <div class="wrap">
+    <a class="logo vc-logo" href="#top" aria-label="Vandercar home"><i class="cube" aria-hidden="true"></i><i class="word" aria-hidden="true"></i></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#about">Company</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary cta" href="#contact">Start a conversation</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<style>
+#hero{position:relative;overflow:hidden;background:var(--navy-deep);color:#fff;min-height:min(78vh,820px);display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+#hero .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform-origin:60% 50%;animation:heroKB 28s ease-out both alternate infinite}
+#hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,var(--navy-deep) 0%,color-mix(in srgb,var(--navy-deep) 78%,transparent) 32%,color-mix(in srgb,var(--navy-deep) 20%,transparent) 68%,color-mix(in srgb,var(--navy-deep) 35%,transparent) 100%)}
+@keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.09)}}
+#hero .hero-body{padding-top:clamp(120px,22vh,240px);padding-bottom:clamp(28px,5vh,56px)}
+#hero .eyebrow{color:var(--ice);display:block;margin-bottom:18px}
+#hero h1{font-size:clamp(2.6rem,7.2vw,5rem);line-height:1.02;margin:0 0 20px;max-width:14ch;color:#fff;font-weight:500}
+#hero .lede{font-size:clamp(1.02rem,1.5vw,1.25rem);line-height:1.55;max-width:56ch;margin:0 0 30px;color:rgba(255,255,255,.88)}
+#hero .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+#hero .hero-cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+#hero .hero-facts{border-top:1px solid rgba(255,255,255,.22);margin-top:clamp(28px,5vh,52px);padding:14px 0;display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between;align-items:center;font-family:var(--font-brand);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ice)}
+#hero .hero-facts span{min-width:0}
+#hero .scroll-cue{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;opacity:.85}
+#hero .scroll-cue i{display:block;width:1px;height:26px;background:currentColor;transform-origin:top;animation:heroCue 2.2s var(--ease) infinite}
+@keyframes heroCue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+@media(max-width:640px){#hero{min-height:60vh}#hero .hero-facts{font-size:.66rem}#hero .scroll-cue{display:none}}
+
+#capabilities{padding:clamp(64px,10vw,130px) 0;background:var(--bg)}
+#capabilities .cap-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(24px,4vw,44px)}
+#capabilities .cap-head h2{margin:8px 0 0;font-size:clamp(2rem,4.5vw,3.4rem)}
+#capabilities .cap-nav{display:flex;gap:10px}
+#capabilities .cap-nav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer;font-size:1.2rem;line-height:1;transition:background .25s var(--ease),color .25s,border-color .25s}
+#capabilities .cap-nav button:hover:not(:disabled){background:var(--accent);border-color:var(--accent);color:var(--bg)}
+#capabilities .cap-nav button:disabled{opacity:.35;cursor:default}
+#capabilities .cap-nav button:focus-visible,#capabilities .track:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#capabilities .track{display:flex;gap:clamp(12px,2vw,24px);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(16px,calc((100vw - 1240px)/2 + 16px)) 4px;scroll-padding-inline:max(16px,calc((100vw - 1240px)/2 + 16px));-webkit-overflow-scrolling:touch}
+#capabilities .track::-webkit-scrollbar{display:none}
+#capabilities .panel{position:relative;flex:0 0 min(78vw,420px);aspect-ratio:3/4;scroll-snap-align:start;overflow:hidden;border-radius:var(--radius);background:var(--navy-deep);color:#fff;margin:0}
+#capabilities .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+#capabilities .panel:hover img{transform:scale(1.05)}
+#capabilities .panel::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--navy-deep) 0%,color-mix(in srgb,var(--navy-deep) 70%,transparent) 38%,transparent 70%)}
+#capabilities .panel figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:clamp(18px,3vw,28px)}
+#capabilities .panel .num{font-family:var(--font-brand);font-size:.7rem;letter-spacing:.12em;color:var(--ice)}
+#capabilities .panel h3{color:#fff;font-size:clamp(1.6rem,2.6vw,2rem);margin:6px 0 8px;line-height:1.1}
+#capabilities .panel p{margin:0;font-size:.97rem;line-height:1.5;color:rgba(255,255,255,.88)}
+#capabilities .prog{height:2px;background:var(--line);margin-top:28px;position:relative;overflow:hidden}
+#capabilities .prog span{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(.2)}
+
+#hard-sites{padding:clamp(64px,10vw,130px) 0;background:var(--bg-alt)}
+#hard-sites .hs-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,7vw,110px);align-items:start}
+#hard-sites h2{font-size:clamp(2rem,4.5vw,3.4rem);margin:8px 0 24px}
+#hard-sites .manifesto{font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.65;color:var(--fg-muted);margin:0;max-width:46ch}
+#hard-sites .manifesto strong{color:var(--fg);font-weight:600}
+#hard-sites .pairs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+#hard-sites .pairs li{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:8px 28px;padding:20px 0;border-bottom:1px solid var(--line)}
+#hard-sites .pairs li:nth-child(2){transition-delay:.06s}#hard-sites .pairs li:nth-child(3){transition-delay:.12s}#hard-sites .pairs li:nth-child(4){transition-delay:.18s}#hard-sites .pairs li:nth-child(5){transition-delay:.24s}#hard-sites .pairs li:nth-child(6){transition-delay:.3s}
+#hard-sites .ob{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.6rem);font-weight:600;line-height:1.15;color:var(--fg)}
+#hard-sites .ap{margin:0;line-height:1.55;color:var(--fg-muted)}
+#hard-sites .ap::before{content:"\2192\00a0";color:var(--accent)}
+@media(max-width:820px){#hard-sites .hs-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){#hard-sites .pairs li{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){#hero .hero-img,#hero .scroll-cue i{animation:none}#capabilities .panel img{transition:none}#capabilities .panel:hover img{transform:none}#capabilities .track{scroll-behavior:auto}}
+</style>
+
+<section id="hero" class="sec sec-hero">
+  <img class="hero-img" src="img/Summit61.jpg" alt="Aerial view of apartments beside the great lawn at Summit Park in Blue Ash, Ohio" width="1400" height="933" fetchpriority="high">
+  <div class="wrap hero-body">
+    <span class="eyebrow">Vandercar &middot; Real estate development</span>
+    <h1>Difficult sites. Finished places.</h1>
+    <p class="lede">Vandercar develops multifamily, industrial, commercial, retail and mixed-use projects across the asset spectrum, specializing in the sites other developers pass over.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects">See our work</a>
+      <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+    </div>
+    <div class="hero-facts">
+      <span>Est. 1991 &middot; Cincinnati, Ohio</span>
+      <span>Ground-up &amp; redevelopment</span>
+      <span>Site through capital stack</span>
+      <a class="scroll-cue" href="#capabilities" aria-label="Scroll to content"><span>Scroll</span><i aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities" class="sec sec-capabilities">
+  <div class="wrap cap-head">
+    <div>
+      <span class="eyebrow reveal">Capabilities</span>
+      <h2 class="reveal">What we build</h2>
+    </div>
+    <div class="cap-nav">
+      <button type="button" class="prev" aria-label="Previous panels">&larr;</button>
+      <button type="button" class="next" aria-label="Next panels">&rarr;</button>
+    </div>
+  </div>
+  <div class="track" tabindex="0" role="region" aria-label="Asset types we develop">
+    <figure class="panel"><img src="img/Summit19.jpg" alt="Apartment buildings along the boardwalk at Summit Park" width="1400" height="933" loading="lazy"><figcaption><span class="num">01</span><h3>Multifamily</h3><p>Rental and for-sale residential woven into walkable districts, designed around the street, the park and the neighbors already there.</p></figcaption></figure>
+    <figure class="panel"><img src="img/cap-industrial.jpg" alt="Long-span distribution warehouse with truck docks" width="1400" height="820" loading="lazy" style="object-position:30% 50%"><figcaption><span class="num">02</span><h3>Industrial</h3><p>Headquarters, distribution and flex space on infill land, with the grading, utilities and access solved before a tenant signs.</p></figcaption></figure>
+    <figure class="panel"><img src="img/cap-office.jpg" alt="Three-story Anthem office building" width="1400" height="933" loading="lazy" style="object-position:42% 50%"><figcaption><span class="num">03</span><h3>Office &amp; Commercial</h3><p>Class A office and build-to-suit space placed where it anchors a district, from corporate headquarters to the upper floors of a town center.</p></figcaption></figure>
+    <figure class="panel"><img src="img/cap-retail.jpg" alt="Kroger Marketplace storefront" width="1400" height="933" loading="lazy" style="object-position:55% 50%"><figcaption><span class="num">04</span><h3>Retail</h3><p>Where the company began, with drug and grocery stores across New England. Today, restaurants and shops sited to draw foot traffic, not just cars.</p></figcaption></figure>
+    <figure class="panel"><img src="img/cap-mixed.jpg" alt="The Approach, a five-story mixed-use building with ground-floor storefronts at Summit Park" width="1400" height="1050" loading="lazy" style="object-position:62% 50%"><figcaption><span class="num">05</span><h3>Mixed-Use</h3><p>Housing, offices, dining and entertainment planned together as districts, like the four that make up Summit Park in Blue Ash.</p></figcaption></figure>
+    <figure class="panel"><img src="img/cap-brownfield.jpg" alt="Aerial of a cleared and graded redevelopment site" width="1200" height="797" loading="lazy"><figcaption><span class="num">06</span><h3>Redevelopment &amp; Brownfield</h3><p>Former industrial ground, like Oakley Station, cleared, remediated and rebuilt as places the city wants back in use.</p></figcaption></figure>
+  </div>
+  <div class="wrap"><div class="prog" aria-hidden="true"><span></span></div></div>
+</section>
+
+<section id="hard-sites" class="sec sec-hard">
+  <div class="wrap hs-grid">
+    <div>
+      <span class="eyebrow reveal">Our specialty</span>
+      <h2 class="reveal">Where others walk away</h2>
+      <p class="manifesto reveal">Some parcels come with a tangle: contaminated soil, a dozen owners, a derelict building, a number that does not pencil. We take that on. <strong>We handle demolition, environmental remediation, parcel assembly and financing gaps</strong> with foresight and creativity, and we work alongside the municipality rather than around it. What looks like a problem on paper is usually a place waiting for someone to finish it.</p>
+    </div>
+    <ul class="pairs">
+      <li class="reveal"><span class="ob">Environmental findings</span><p class="ap">Phase II, remediation plan, VAP/NFA path and insurance priced into the deal.</p></li>
+      <li class="reveal"><span class="ob">Fragmented ownership</span><p class="ap">Quiet assembly, options, and holdouts handled.</p></li>
+      <li class="reveal"><span class="ob">Obsolete structures</span><p class="ap">Demolition and abatement sequenced with construction.</p></li>
+      <li class="reveal"><span class="ob">Zoning that doesn&rsquo;t fit</span><p class="ap">Entitlements, PUDs and variances.</p></li>
+      <li class="reveal"><span class="ob">Gap in the capital stack</span><p class="ap">TIF, abatements, NMTC and public partnership.</p></li>
+      <li class="reveal"><span class="ob">Municipal priorities</span><p class="ap">Plans that match the city&rsquo;s land-use vision.</p></li>
+    </ul>
+  </div>
+</section>
+
+<script>
+(function(){
+  var sec=document.getElementById('capabilities');if(!sec)return;
+  var t=sec.querySelector('.track'),p=sec.querySelector('.prev'),n=sec.querySelector('.next'),bar=sec.querySelector('.prog span');
+  if(!t)return;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function step(){var f=t.querySelector('.panel');return f?f.getBoundingClientRect().width+24:300}
+  function upd(){
+    var max=t.scrollWidth-t.clientWidth,r=max>0?t.scrollLeft/max:1;
+    if(bar)bar.style.transform='scaleX('+Math.max(.08,Math.min(1,t.clientWidth/t.scrollWidth+r*(1-t.clientWidth/t.scrollWidth)))+')';
+    if(p)p.disabled=t.scrollLeft<4;
+    if(n)n.disabled=t.scrollLeft>max-4;
+  }
+  function go(d){t.scrollBy({left:d*step(),behavior:reduce?'auto':'smooth'})}
+  if(p)p.addEventListener('click',function(){go(-1)});
+  if(n)n.addEventListener('click',function(){go(1)});
+  t.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'){e.preventDefault();go(1)}else if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}
+  });
+  var raf;t.addEventListener('scroll',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(upd)},{passive:true});
+  window.addEventListener('resize',upd);upd();
+})();
+</script>
+<style>
+#projects,#process{padding:clamp(64px,9vw,128px) 0}
+#projects .head,#process .head{max-width:46rem;margin-bottom:clamp(28px,4vw,52px)}
+#projects .head h2,#process .head h2{margin:.35em 0 0;font-size:clamp(2.2rem,5vw,4rem);line-height:1.04}
+#projects .stage{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start;transition:opacity .25s var(--ease)}
+#projects .stage.fade{opacity:0}
+#projects .gal{position:relative;min-width:0}
+#projects .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:16/10;background:var(--bg-alt);border-radius:var(--radius);outline-offset:3px;overscroll-behavior-x:contain}
+#projects .track::-webkit-scrollbar{display:none}
+#projects .track figure{flex:0 0 100%;margin:0;scroll-snap-align:start;position:relative;min-width:0}
+#projects .track img{width:100%;height:100%;object-fit:cover;display:block}
+#projects .track figcaption{position:absolute;left:12px;bottom:12px;background:var(--surface);color:var(--fg-muted);font-size:.75rem;padding:4px 10px;border-radius:var(--radius)}
+#projects .arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;font-size:1.1rem;display:grid;place-items:center;transition:background .2s,color .2s}
+#projects .arrow:hover{background:var(--accent);color:var(--bg)}
+#projects .arrow.prev{left:12px}#projects .arrow.next{right:12px}
+#projects .arrow:disabled{opacity:.35;cursor:default}
+#projects .dots{display:flex;gap:4px;justify-content:center;margin-top:6px}
+#projects .dots button{width:24px;height:24px;border:0;background:none;cursor:pointer;padding:0;display:grid;place-items:center}
+#projects .dots button::before{content:"";width:8px;height:8px;border-radius:50%;border:1px solid var(--fg-muted);transition:background .2s,transform .2s}
+#projects .dots button[aria-current="true"]::before{background:var(--accent);border-color:var(--accent);transform:scale(1.25)}
+#projects .info{min-width:0}
+#projects .pill{display:inline-block;font-family:var(--font-brand);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:1px solid var(--accent);color:var(--accent)}
+#projects .pill.done{border-color:var(--line);color:var(--fg-muted)}
+#projects .info h3{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;margin:.5em 0 .1em}
+#projects .loc{color:var(--fg-muted);margin:0 0 1em}
+#projects .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 1.1em;padding:0}
+#projects .tags li{font-size:.8rem;padding:3px 10px;border:1px solid var(--line);border-radius:var(--radius)}
+#projects .desc{margin:0 0 1.2em;line-height:1.6}
+#projects dl{margin:0;border-top:1px solid var(--line)}
+#projects dl div{padding:9px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:12px;font-size:.95rem}
+#projects dt{font-family:var(--font-brand);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-muted);padding-top:3px}
+#projects dd{margin:0}
+#projects .pager{margin-top:clamp(28px,4vw,48px);display:flex;align-items:stretch;gap:16px}
+#projects .tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));flex:1;min-width:0;border-top:1px solid var(--line)}
+#projects .tab{background:none;border:0;border-top:2px solid transparent;margin-top:-1px;text-align:left;padding:14px 12px 4px 0;cursor:pointer;color:var(--fg-muted);font:inherit;min-width:0}
+#projects .tab b{display:block;font-family:var(--font-display);font-size:1.15rem;font-weight:600;line-height:1.2;color:inherit}
+#projects .tab small{font-size:.78rem}
+#projects .tab[aria-selected="true"]{border-top-color:var(--accent);color:var(--fg)}
+#projects .ctl{display:flex;align-items:center;gap:10px;padding-top:10px}
+#projects .ctl output{font-family:var(--font-brand);letter-spacing:.1em;font-size:.85rem;min-width:3.6rem;text-align:center}
+#projects .ctl button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--fg);cursor:pointer;font-size:1rem}
+#projects .ctl button:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:860px){
+#projects .stage{grid-template-columns:minmax(0,1fr)}
+#projects .track{aspect-ratio:4/3}
+#projects .pager{flex-direction:column-reverse;gap:8px}
+#projects .tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+#projects .ctl{justify-content:space-between}
+}
+#process .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,6vw,96px)}
+#process .rail{position:sticky;top:18vh;align-self:start;min-width:0}
+#process .big{font-family:var(--font-display);font-size:clamp(6rem,14vw,12rem);line-height:.9;font-weight:500;color:var(--accent);display:block}
+#process .cur{font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.15;margin:.3em 0 0;min-height:2.4em}
+#process .big,#process .cur{transition:opacity .25s var(--ease)}
+#process .of{font-family:var(--font-brand);letter-spacing:.12em;font-size:.75rem;text-transform:uppercase;color:var(--fg-muted);margin-top:1em}
+#process ol{list-style:none;margin:0;padding:0 0 0 clamp(28px,4vw,48px);position:relative;min-width:0}
+#process ol::before,#process .fill{content:"";position:absolute;left:0;top:0;width:1px;background:var(--line);height:100%}
+#process .fill{background:var(--accent);width:2px;left:-.5px;height:var(--p,0%);transition:height .15s linear}
+#process li{padding:0 0 clamp(56px,10vh,120px);opacity:.4;transition:opacity .35s var(--ease);position:relative;min-width:0}
+#process li:last-child{padding-bottom:0}
+#process li.on{opacity:1}
+#process li::before{content:attr(data-n);position:absolute;left:calc(-1*clamp(28px,4vw,48px) - 13px);top:.2em;width:26px;height:26px;border-radius:50%;background:var(--surface);border:1.5px solid var(--fg-muted);font-family:var(--font-brand);font-size:.72rem;font-weight:600;display:grid;place-items:center;color:var(--fg);transition:background .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)}
+#process li.on::before{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);transform:scale(1.15);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 22%,transparent)}
+#process li h3{font-size:clamp(1.6rem,2.4vw,2.1rem);margin:0 0 .4em;line-height:1.15}
+#process li p{margin:0 0 .9em;line-height:1.6;max-width:36rem}
+#process .handle{font-size:.85rem;color:var(--fg-muted);border-top:1px solid var(--line);padding-top:.7em;max-width:36rem}
+#process .handle b{font-family:var(--font-brand);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.68rem;color:var(--fg);margin-right:.5em}
+@media(max-width:860px){
+#process .grid{grid-template-columns:minmax(0,1fr)}
+#process .rail{display:none}
+#process li{padding-bottom:40px;opacity:1}
+}
+@media(prefers-reduced-motion:reduce){
+#projects .stage,#projects .arrow,#process *{transition:none!important}
+#projects .track{scroll-behavior:auto}
+#process li{opacity:1}
+#process .rail{position:static}
+#process .fill{display:none}
+}
+</style>
+
+<section id="projects" class="sec sec-projects">
+<div class="wrap">
+<div class="head reveal"><p class="eyebrow">Selected work</p><h2>Places that were hard to build, and are now hard to leave.</h2></div>
+<div class="stage" id="pj-stage">
+<div class="gal">
+<div class="track" id="pj-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Project photos">
+<figure><img src="img/Summit61.jpg" alt="Aerial of Summit Park apartments beside the great lawn" width="1400" height="933"></figure>
+<figure><img src="img/approach.jpg" alt="Aerial of the Approach mixed-use building at Summit Park" width="1400" height="1049" loading="lazy"></figure>
+<figure><img src="img/Summit19.jpg" alt="Boardwalk and apartment buildings with the observation tower" width="1400" height="933" loading="lazy"></figure>
+<figure><img src="img/Summit40.jpg" alt="Summit Park, Blue Ash" width="1400" height="933" loading="lazy"></figure>
+<figure><img src="img/Summit50.jpg" alt="Summit Park, Blue Ash" width="1400" height="933" loading="lazy"></figure>
+<figure><img src="img/aerial.jpg" alt="Satellite view of the Summit Park district" width="1400" height="948" loading="lazy"></figure>
+</div>
+<button class="arrow prev" id="pj-ap" type="button" aria-label="Previous photo">&larr;</button>
+<button class="arrow next" id="pj-an" type="button" aria-label="Next photo">&rarr;</button>
+<div class="dots" id="pj-dots"></div>
+</div>
+<div class="info" id="pj-info" aria-live="polite">
+<span class="pill">In progress</span>
+<h3>The Neighborhoods at Summit Park</h3>
+<p class="loc">Blue Ash, OH</p>
+<ul class="tags"><li>Residential</li><li>Retail</li><li>Restaurants</li><li>Entertainment</li><li>Class A office</li></ul>
+<p class="desc">A walkable mixed-use community of four districts, with rental and for-sale residential, retail, restaurants, entertainment and Class A office. It builds on the City of Blue Ash's $75M Summit Park investment and is delivered as a public-private partnership.</p>
+<dl><div><dt>Structure</dt><dd>Public-private partnership</dd></div><div><dt>Districts</dt><dd>Four walkable districts</dd></div><div><dt>Public realm</dt><dd>Pedestrian connectivity and amenitized public space</dd></div></dl>
+</div>
+</div>
+<div class="pager">
+<div class="tabs" id="pj-tabs" role="tablist" aria-label="Projects"></div>
+<div class="ctl"><button type="button" id="pj-pp" aria-label="Previous project">&larr;</button><output id="pj-count" aria-live="polite">1 / 6</output><button type="button" id="pj-pn" aria-label="Next project">&rarr;</button></div>
+</div>
+</div>
+</section>
+
+<section id="process" class="sec sec-process">
+<div class="wrap">
+<div class="head reveal"><p class="eyebrow">Process</p><h2>From site to certificate of occupancy</h2></div>
+<div class="grid">
+<div class="rail" aria-hidden="true"><span class="big" id="pr-n">01</span><p class="cur" id="pr-t">Site selection &amp; assembly</p><p class="of">Step <span id="pr-c">1</span> of 6</p></div>
+<ol id="pr-list">
+<span class="fill" id="pr-fill"></span>
+<li data-n="1" data-t="Site selection &amp; assembly" class="on"><h3>Site selection &amp; assembly</h3><p>We look for the parcels others have written off: fragmented ownership, obsolete buildings, awkward access. We assemble them one owner at a time, under contract, before the market sees the whole picture.</p><div class="handle"><b>We handle</b>Parcel research &middot; Owner outreach &middot; Contracts &middot; Assemblage</div></li>
+<li data-n="2" data-t="Due diligence &amp; environmental"><h3>Due diligence &amp; environmental</h3><p>Before we close, we know what is in the ground and under the slab. Surveys, soils and Phase I and II work set the real cost of demolition and remediation.</p><div class="handle"><b>We handle</b>Title &amp; survey &middot; Phase I/II &middot; Remediation scope &middot; Demolition</div></li>
+<li data-n="3" data-t="Entitlements &amp; zoning"><h3>Entitlements &amp; zoning</h3><p>We take plans through rezoning, variances and site-plan review with the municipality, not around it. Neighbors and officials hear the project from us early.</p><div class="handle"><b>We handle</b>Rezoning &middot; Site plan approval &middot; Community meetings &middot; Permits</div></li>
+<li data-n="4" data-t="Incentives &amp; public partnership"><h3>Incentives &amp; public partnership</h3><p>Where a site needs help to pencil, we negotiate it directly: TIF, abatements and shared infrastructure with the city. Summit Park, built beside Blue Ash's public investment, is the model.</p><div class="handle"><b>We handle</b>TIF &middot; Tax abatements &middot; Development agreements &middot; Public infrastructure</div></li>
+<li data-n="5" data-t="Capital stack"><h3>Capital stack</h3><p>We structure the financing around the project, closing gaps that conventional lenders leave open. Equity, debt and public dollars are lined up before the first shovel.</p><div class="handle"><b>We handle</b>Equity &middot; Senior debt &middot; Gap financing &middot; Lender relations</div></li>
+<li data-n="6" data-t="Development &amp; construction management"><h3>Development &amp; construction management</h3><p>Our own team runs site development and vertical construction, so schedule and budget have one owner. We stay through lease-up and the certificate of occupancy.</p><div class="handle"><b>We handle</b>Site development &middot; Bidding &middot; Project management &middot; Closeout</div></li>
+</ol>
+</div>
+</div>
+</section>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var stage=$('pj-stage'),track=$('pj-track');
+if(stage&&track){
+var D=[
+{n:'The Neighborhoods at Summit Park',l:'Blue Ash, OH',s:0,t:['Residential','Retail','Restaurants','Entertainment','Class A office'],d:"A walkable mixed-use community of four districts, with rental and for-sale residential, retail, restaurants, entertainment and Class A office. It builds on the City of Blue Ash's $75M Summit Park investment and is delivered as a public-private partnership.",f:[['Structure','Public-private partnership'],['Districts','Four walkable districts'],['Public realm','Pedestrian connectivity and amenitized public space']],p:[['Summit61','Aerial of Summit Park apartments beside the great lawn'],['approach','Aerial of the Approach mixed-use building at Summit Park'],['Summit19','Boardwalk and apartment buildings with the observation tower'],['Summit40','Summit Park, Blue Ash'],['Summit50','Summit Park, Blue Ash'],['aerial','Satellite view of the Summit Park district']]},
+{n:'The Row on Merchant',l:'Springdale, OH',s:1,t:['Apartments','Townhomes','Adaptive reuse'],d:'A catalytic redevelopment that converted two existing three-story office buildings into 131 apartments and added 97 new townhomes on the surrounding land. Residents have garage parking, elevator service, a fitness center and a rooftop lounge.',f:[['Apartments','131 units in two converted office buildings'],['Townhomes','97 new three-story homes'],['Amenities','Garage parking, elevators, fitness center, rooftop lounge']],p:[['rom-aerial','Aerial of The Row on Merchant townhomes and converted office buildings'],['rom-sign','The Row on Merchant monument sign with townhomes behind'],['rom-townhomes','Aerial of a row of new three-story townhomes'],['rom-street','Townhomes along the street with orange entry doors'],['rom-apartments','Aerial of a converted office building, now apartments'],['rom-apt-living','Open living room and kitchen in a converted-office apartment'],['rom-th-living','Townhome living room'],['rom-clubhouse','Clubhouse lounge in the converted office building'],['rom-rooftop','Aerial of the rooftop lounge']]},
+{n:'Cold Jet Global Headquarters',l:'Loveland, OH',s:1,t:['Corporate headquarters','Office','Manufacturing','Redevelopment'],d:'Cold Jet, the maker of dry ice cleaning and production equipment, needed one building to bring its two Cincinnati-area facilities together. The renovated 107,440 square foot building in Loveland now holds the company\'s global headquarters, manufacturing and production under one roof, and opened in March 2024.',f:[['Completed','2024'],['Size','107,440 sq ft renovated building'],['Program','Global headquarters, manufacturing and production']],p:[['cj-front','Cold Jet Global Headquarters entrance with monument sign and flags'],['cj-lobby','Reception lounge with marble floors and a ring pendant light'],['cj-stair','Open stair with a mountain mural and seating area'],['cj-wall','Living wall with the Cold Jet logo'],['cj-board','Boardroom with white leather chairs'],['cj-cafe','Two-story cafe and dining hall'],['cj-kitchen','Kitchen and bar seating in the employee cafe'],['cj-lounge','Open office lounge with blue and white seating']]},
+{n:'Hillman Group Headquarters',l:'Forest Park, OH',s:1,t:['Corporate headquarters','Office','Redevelopment'],d:'In 2022 Vandercar acquired an outdated office building in Forest Park and rebuilt it into a corporate headquarters for Hillman Group. The client wanted to stay close to its existing operation so no staff were disrupted, and the finished space carries the Hillman brand throughout.',f:[['Completed','2022'],['Approach','Acquire and fully renovate an existing building'],['Why here','Adjacent to the client\'s existing operation']],p:[['hill-lobby','Hillman Group entry lobby with "Built Hillman Strong" wall'],['hill-reception','Reception lounge with fireplace and wood ceiling'],['hill-board','Boardroom with live-edge walnut table'],['hill-lounge','Employee lounge and cafe'],['hill-training','Training room and collaboration space'],['hill-cafe','Kitchen and market']]},
+{n:'Oakley Station, Center of Cincinnati',l:'Oakley, Cincinnati, OH',s:1,t:['Mixed-use','Brownfield','Retail','Residential','Office','Entertainment'],d:'Vandercar acquired the 74-acre Cincinnati Milling Machine plant site in 2011, once the largest machine tool company in the world and by then 1.6 million square feet of dormant industrial buildings. Full demolition and environmental remediation finished in 2012, clearing the way for a mixed-use district of residential, retail, entertainment and office.',f:[['Site','74 acres, former Cincinnati Milacron plant'],['Removed','1.6M sq ft of obsolete industrial buildings'],['Public partners','City of Cincinnati, Ohio Brownfields Redevelopment program, $30M Kennedy Connector']],p:[['oak-cinemark','Cinemark theater at Oakley Station'],['oak-townhomes','Brick townhomes at Oakley Station'],['oak-plan','Oakley Station concept development plan with Vandercar Way'],['oak-office','Rendering of a three-story office building at Oakley Station'],['oak-pool','Rendering of the apartment pool courtyard'],['oak-court','Rendering of the apartment courtyard']]},
+{n:'The Center of Cincinnati',l:'Oakley, Cincinnati, OH',s:1,t:['Retail','Brownfield','Power center'],d:'Begun in 2005 on the former Cincinnati Milacron property, the Center of Cincinnati turned an unusable brownfield into a 440,000 square foot retail center anchored by Meijer, Sam\'s Club, Target and PetSmart. It created a central retail node for Hyde Park, Oakley and Pleasant Ridge and set the stage for Oakley Station next door.',f:[['Size','440,000 sq ft of retail'],['Anchors','Meijer, Sam\'s Club, Target, PetSmart'],['Prior use','Brownfield, former Cincinnati Milacron property']],p:[['coc-sign','Center of Cincinnati monument sign with Sam\'s Club, Meijer and Target'],['coc-aerial','Aerial of the Center of Cincinnati with tenant locations'],['coc-meijer','Meijer storefront at the Center of Cincinnati'],['coc-target','Target storefront at the Center of Cincinnati'],['coc-sams','Sam\'s Club at the Center of Cincinnati']]}
+];
+var cur=0,idx=0,tabs=$('pj-tabs'),dots=$('pj-dots'),info=$('pj-info'),busy=0;
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+D.forEach(function(p,i){var b=document.createElement('button');b.type='button';b.className='tab';b.setAttribute('role','tab');b.innerHTML='<b>'+esc(p.n)+'</b><small>'+(p.s?'Completed':'In progress')+'</small>';b.onclick=function(){go(i)};tabs.appendChild(b)});
+function slides(){return track.children}
+function buildDots(){dots.innerHTML='';for(var i=0;i<slides().length;i++)(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Photo '+(i+1));b.onclick=function(){to(i)};dots.appendChild(b)})(i);mark()}
+function mark(){var n=slides().length;[].forEach.call(dots.children,function(b,i){b.setAttribute('aria-current',i===idx)});$('pj-ap').disabled=idx<=0;$('pj-an').disabled=idx>=n-1}
+function to(i){var n=slides().length;i=Math.max(0,Math.min(n-1,i));track.scrollTo({left:i*track.clientWidth,behavior:rm?'auto':'smooth'});idx=i;mark()}
+track.addEventListener('scroll',function(){var i=Math.round(track.scrollLeft/track.clientWidth);if(i!==idx){idx=i;mark()}},{passive:true});
+$('pj-ap').onclick=function(){to(idx-1)};$('pj-an').onclick=function(){to(idx+1)};
+track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();to(idx+1)}else if(e.key==='ArrowLeft'){e.preventDefault();to(idx-1)}});
+function render(){var p=D[cur],h='';
+p.p.forEach(function(x,i){h+='<figure><img src="img/'+x[0]+'.jpg" alt="'+esc(x[1])+'" width="1400" height="933"'+(i?' loading="lazy"':'')+'>'+(p.r?'<figcaption>Representative imagery</figcaption>':'')+'</figure>'});
+track.innerHTML=h;track.scrollLeft=0;idx=0;
+info.innerHTML='<span class="pill'+(p.s?' done':'')+'">'+(p.s?'Completed':'In progress')+'</span><h3>'+esc(p.n)+'</h3><p class="loc">'+esc(p.l)+'</p><ul class="tags">'+p.t.map(function(t){return'<li>'+esc(t)+'</li>'}).join('')+'</ul><p class="desc">'+esc(p.d)+'</p><dl>'+p.f.map(function(f){return'<div><dt>'+esc(f[0])+'</dt><dd>'+esc(f[1])+'</dd></div>'}).join('')+'</dl>';
+buildDots()}
+function sel(){[].forEach.call(tabs.children,function(b,i){b.setAttribute('aria-selected',i===cur);b.tabIndex=i===cur?0:-1});$('pj-count').textContent=(cur+1)+' / '+D.length}
+function go(i){i=(i+D.length)%D.length;if(i===cur||busy)return;busy=1;cur=i;sel();
+if(rm){render();busy=0;return}
+stage.classList.add('fade');setTimeout(function(){render();stage.classList.remove('fade');busy=0},230)}
+$('pj-pp').onclick=function(){go(cur-1)};$('pj-pn').onclick=function(){go(cur+1)};
+tabs.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){go(cur+1);tabs.children[cur].focus()}else if(e.key==='ArrowLeft'){go(cur-1);tabs.children[cur].focus()}});
+sel();buildDots();
+}
+var list=$('pr-list');
+if(list){
+var items=[].slice.call(list.querySelectorAll('li')),fill=$('pr-fill'),act=-1;
+function set(i){if(i===act)return;act=i;items.forEach(function(l,k){l.classList.toggle('on',k===i)});
+var n=$('pr-n'),t=$('pr-t');if(n){n.textContent='0'+(i+1);t.innerHTML=items[i].getAttribute('data-t');$('pr-c').textContent=i+1}
+}
+set(0);
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+var tick=0;
+function calc(){tick=0;var line=window.innerHeight*0.45,i=0;
+for(var k=0;k<items.length;k++){if(items[k].getBoundingClientRect().top<=line)i=k}
+set(i);
+var first=items[0].getBoundingClientRect(),last=items[items.length-1].getBoundingClientRect();
+var span=(last.top-first.top)||1,prog=Math.max(0,Math.min(1,(line-first.top)/span));
+fill.style.setProperty('--p',(prog*100)+'%')}
+function onS(){if(!tick){tick=1;requestAnimationFrame(calc)}}
+window.addEventListener('scroll',onS,{passive:true});window.addEventListener('resize',onS,{passive:true});calc()}
+else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'}
+}
+})();
+</script>
+<style>
+#numbers,#about,#partners,#contact,#footer{position:relative}
+#numbers{background:var(--bg-alt);padding:clamp(40px,6vw,72px) 0}
+#numbers .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 0}
+#numbers .fig{text-align:center;padding:0 12px;min-width:0}
+#numbers .num{font-family:var(--font-display);font-weight:500;font-size:clamp(48px,9vw,96px);line-height:1;color:var(--fg);font-variant-numeric:tabular-nums}
+#numbers .lbl{font-family:var(--font-brand);text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--fg-muted);margin-top:12px}
+@media(min-width:800px){
+#numbers .grid{grid-template-columns:repeat(4,1fr)}
+#numbers .fig+.fig{border-left:1px solid var(--line)}
+}
+#about{padding:clamp(64px,10vw,140px) 0;background:var(--bg)}
+#about h2{font-size:clamp(34px,5vw,60px);max-width:16ch;margin:12px 0 clamp(36px,5vw,64px)}
+#about .cols{display:grid;gap:48px;grid-template-columns:minmax(0,1fr)}
+#about .tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:1px solid var(--line)}
+#about .tl li{position:relative;padding:0 0 28px 12px;min-width:0}
+#about .tl li::before{content:"";position:absolute;left:-27px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+#about .yr{font-family:var(--font-brand);letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--accent)}
+#about .tl p{margin:6px 0 0;color:var(--fg);line-height:1.5}
+#about figure{margin:0}
+#about img{display:block;width:100%;height:auto;aspect-ratio:1400/1049;object-fit:cover;border-radius:var(--radius)}
+#about blockquote{margin:24px 0 0;font-family:var(--font-display);font-style:italic;font-size:clamp(22px,2.6vw,30px);line-height:1.3;color:var(--fg);border-left:2px solid var(--accent);padding-left:20px}
+#about .lead{margin-top:36px;padding-top:20px;border-top:1px solid var(--line)}
+#about .lead b{display:block;font-family:var(--font-display);font-size:24px;font-weight:600}
+#about .lead span,#about .lead small{color:var(--fg-muted)}
+#about .lead small{display:block;margin-top:6px;font-size:14px}
+@media(min-width:800px){
+#about .tl{display:grid;grid-template-columns:repeat(5,1fr);gap:0 20px;border-left:0;border-top:1px solid var(--line);padding:0}
+#about .tl li{padding:28px 0 0}
+#about .tl li::before{left:0;top:-5px}
+}
+@media(min-width:1000px){
+#about .cols{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:72px;align-items:start}
+#about .tl{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line);padding-left:22px}
+#about .tl li{padding:0 0 28px 12px}
+#about .tl li::before{left:-27px;top:7px}
+}
+#partners{padding:clamp(56px,8vw,110px) 0;background:var(--bg-alt)}
+#partners h2{font-size:clamp(30px,4vw,48px);margin:12px 0 40px}
+#partners .grid{display:grid;gap:36px;grid-template-columns:minmax(0,1fr)}
+#partners .col{border-top:1px solid var(--fg);padding-top:18px;min-width:0}
+#partners h3{font-size:26px;margin:0 0 10px}
+#partners p{margin:0;color:var(--fg-muted);line-height:1.55}
+@media(min-width:800px){#partners .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}}
+#contact{padding:clamp(64px,10vw,140px) 0;background:var(--bg)}
+#contact .cols{display:grid;gap:48px;grid-template-columns:minmax(0,1fr)}
+#contact h2{font-size:clamp(34px,5vw,60px);margin:12px 0 20px}
+#contact p{color:var(--fg-muted);line-height:1.6;max-width:46ch}
+#contact .office{font-family:var(--font-brand);letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--fg);margin-top:28px}
+#contact .mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:10px}
+#contact address{font-style:normal;color:var(--fg);line-height:1.6;margin-top:8px}
+#contact address a{color:inherit}
+#contact .mail a{font-size:18px;color:var(--fg);user-select:all}
+#contact .mail button{font:inherit;font-size:14px;background:none;color:var(--accent);border:1px solid var(--line);border-radius:var(--radius);padding:6px 12px;cursor:pointer}
+#contact .note{font-size:13px;margin-top:8px}
+#contact form{display:grid;gap:18px;min-width:0}
+#contact label{display:block;font-family:var(--font-brand);letter-spacing:.12em;text-transform:uppercase;font-size:11px;color:var(--fg-muted);margin-bottom:6px}
+#contact input,#contact select,#contact textarea{width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:var(--fg);background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:8px 0}
+#contact textarea{min-height:110px;resize:vertical}
+#contact select option{background:var(--surface);color:var(--fg)}
+#contact input:focus,#contact select:focus,#contact textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
+#contact .err{color:var(--accent);font-size:14px;min-height:1em;margin:0}
+#contact .thanks{font-family:var(--font-display);font-size:clamp(26px,3vw,36px);margin:0}
+#contact .thanks-note{font-size:13px;margin-top:8px}
+@media(min-width:900px){#contact .cols{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:88px}}
+#footer{background:var(--navy-deep);color:#fff;padding:36px 0 28px}
+#footer .row{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+#footer .vc-logo{--lh:26px;color:#fff}
+#footer nav,#footer .legal{display:flex;flex-wrap:wrap;gap:8px 22px}
+#footer a{color:var(--ice);text-decoration:none;font-size:15px}
+#footer a:hover,#footer a:focus-visible{color:#fff;text-decoration:underline}
+#footer .legal{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:14px;color:var(--ice);align-items:center}
+#footer .legal a{font-size:14px}
+#footer .legal .top{margin-left:auto}
+</style>
+
+<section id="numbers" class="sec sec-numbers" aria-label="Vandercar by the numbers">
+  <div class="wrap grid">
+    <div class="fig"><div class="num" data-to="1991" data-plain="1">1991</div><div class="lbl">Founded</div></div>
+    <div class="fig"><div class="num" data-to="30" data-suffix="+">30+</div><div class="lbl">Years developing</div></div>
+    <div class="fig"><div class="num" data-to="6">6</div><div class="lbl">Asset types</div></div>
+    <div class="fig"><div class="num" data-to="100" data-suffix="%">100%</div><div class="lbl">Stages handled in-house</div></div>
+  </div>
+</section>
+
+<section id="about" class="sec sec-about">
+  <div class="wrap">
+    <span class="eyebrow reveal">Company</span>
+    <h2 class="reveal">Thirty years of difficult, finished projects</h2>
+    <div class="cols">
+      <ol class="tl reveal">
+        <li><span class="yr">1991</span><p>Founded in Cincinnati by Rob Smyjunas as a commercial brokerage.</p></li>
+        <li><span class="yr">1995</span><p>Becomes a developer: drug and grocery stores across New Hampshire and New England.</p></li>
+        <li><span class="yr">Late 1990s–2000s</span><p>Exclusive broker/developer for Macy's under its New England Asset Utilization Program.</p></li>
+        <li><span class="yr">2005</span><p>The Center of Cincinnati turns a Milacron brownfield in Oakley into 440,000 sq ft of retail.</p></li>
+        <li><span class="yr">2011–2012</span><p>Acquires the 74-acre Oakley plant site, clears 1.6M sq ft of dormant industry, and launches Oakley Station.</p></li>
+        <li><span class="yr">2022</span><p>Delivers the Hillman Group headquarters in Forest Park.</p></li>
+        <li><span class="yr">2024</span><p>Delivers the Cold Jet global headquarters in Loveland.</p></li>
+        <li><span class="yr">Today</span><p>The Neighborhoods at Summit Park.</p></li>
+      </ol>
+      <figure class="reveal">
+        <img src="img/approach.jpg" width="1400" height="1049" loading="lazy" alt="Aerial view of the Approach mixed-use building at Summit Park">
+        <blockquote>We overcome site conditions, environmental issues and financing barriers with foresight and creativity.</blockquote>
+        <div class="lead">
+          <span class="eyebrow">Leadership</span>
+          <b>Rob Smyjunas</b>
+          <span>Founder &amp; Chief Executive Officer</span>
+          <small><a href="#team">Meet the full team</a></small>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+#team{background:var(--bg);padding-block:clamp(4rem,9vw,8rem)}
+#team .team-head{max-width:62ch;margin-bottom:clamp(2rem,5vw,4rem)}
+#team .team-head h2{margin:8px 0 16px}
+#team .people{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+#team .person{padding:clamp(28px,4vw,48px) 0;border-bottom:1px solid var(--line)}
+#team .who{min-width:0;max-width:68ch}
+#team .who h3{font-size:clamp(1.6rem,2.6vw,2.1rem);margin:0 0 4px}
+#team .role{font-family:var(--font-brand);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px}
+#team .who p{color:var(--fg-muted);line-height:1.65;margin:0 0 .8em}
+#team .who p:last-of-type{margin-bottom:0}
+#team .creds{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;padding:0;list-style:none;font-size:.9rem;color:var(--fg)}
+#team .creds li{display:inline-flex;align-items:center;gap:8px}
+#team .creds li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none}
+</style>
+
+<section id="team" class="sec sec-team">
+  <div class="wrap">
+    <div class="team-head reveal">
+      <span class="eyebrow">Our team</span>
+      <h2>Three people. Every stage of the deal.</h2>
+      <p class="lede">A small, senior team handles each project first-hand, from the first look at a site through engineering, financing and construction.</p>
+    </div>
+    <ul class="people">
+      <li class="person reveal">
+        <div class="who">
+          <h3>J. Robert Smyjunas</h3>
+          <span class="role">Chief Executive Officer</span>
+          <p>Rob has been in commercial real estate since 1987 and founded Vandercar in 1991. He has led office, retail, industrial and mixed-use developments in seven states with a combined value of more than $700 million.</p>
+          <p>Early in his career he worked at the center of the Savings &amp; Loan crisis, advising lenders and the federal government and buying commercial mortgages and foreclosed properties from banks and the Resolution Trust Corporation. That experience in distressed assets shaped the firm's appetite for the sites other developers pass over.</p>
+          <ul class="creds"><li>Founded Vandercar, 1991</li><li>Seven states, $700M+ developed</li><li>Distressed-asset and workout experience</li></ul>
+        </div>
+      </li>
+      <li class="person reveal">
+        <div class="who">
+          <h3>Steven N. Dragon, P.E.</h3>
+          <span class="role">Vice President, Development &amp; Design</span>
+          <p>Steve has been part of Vandercar for almost twenty years and leads planning, design and permitting on the firm's larger projects. Before joining, he spent eleven years as an Associate and Senior Project Manager in the land development group at CDS Associates.</p>
+          <p>Over his career he has worked on well over 300 residential, office, retail and industrial developments. He is a registered Professional Engineer with a civil engineering degree from Purdue University and an MBA from Xavier University.</p>
+          <ul class="creds"><li>Registered Professional Engineer</li><li>300+ developments</li><li>B.S. Civil Engineering, Purdue · MBA, Xavier</li></ul>
+        </div>
+      </li>
+      <li class="person reveal">
+        <div class="who">
+          <h3>Tyler Fojtik</h3>
+          <span class="role">Vice President, Acquisitions &amp; Finance</span>
+          <p>Tyler leads acquisitions, incentives and capital-stack structuring. He joined Vandercar in 2020 after a decade in corporate finance, where he served as Director of Financial Planning and Analysis and later as Chief Financial Officer.</p>
+          <p>That background in project and structured finance, strategic planning and corporate development is what lets the firm underwrite complicated sites with confidence and build capital stacks that close.</p>
+          <ul class="creds"><li>BBA, Real Estate Finance, Lindner College of Business</li><li>Former CFO</li><li>Structured and project finance</li></ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="partners" class="sec sec-partners">
+  <div class="wrap">
+    <span class="eyebrow reveal">Partners</span>
+    <h2 class="reveal">Who we work with</h2>
+    <div class="grid">
+      <div class="col reveal"><h3>Municipalities &amp; public entities</h3><p>Plans that match the land-use vision, and public-private structures that hold up through approvals and construction.</p></div>
+      <div class="col reveal"><h3>Credit tenants &amp; corporate users</h3><p>Build-to-suit delivery for single-tenant and multi-tenant users, from site selection through occupancy.</p></div>
+      <div class="col reveal"><h3>Capital partners &amp; landowners</h3><p>Assemblage, joint ventures and recapitalizations that turn fragmented or stalled land into a financeable project.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec sec-contact">
+  <div class="wrap cols">
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Have a site that needs a developer?</h2>
+      <p>Tell us about the land, the constraints and where it is stuck. We will tell you plainly whether we can move it forward and how.</p>
+      <div class="office">Vandercar</div>
+      <address>5027 Madison Road<br>Cincinnati, OH 45227<br><a href="tel:+15132721700">513.272.1700</a></address>
+      <div class="mail"><a id="contact-email" href="mailto:info@vanhold.com">info@vanhold.com</a><button type="button" id="contact-copy">Copy</button><span id="contact-copied" class="note" role="status"></span></div>
+    </div>
+    <div class="reveal">
+      <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+        <div><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
+        <div><label for="contact-company">Company</label><input id="contact-company" name="company" type="text" autocomplete="organization"></div>
+        <div><label for="contact-mail">Email</label><input id="contact-mail" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="contact-phone">Phone</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div><label for="contact-role">I am a…</label>
+          <select id="contact-role" name="role"><option>Landowner</option><option>Municipality</option><option>Tenant / user</option><option>Capital partner</option><option>Broker</option><option>Other</option></select></div>
+        <div><label for="contact-site">Tell us about the site</label><textarea id="contact-site" name="site"></textarea></div>
+        <p class="err" id="contact-err" role="alert"></p>
+        <div><button type="submit" class="btn btn-primary" id="contact-submit">Send</button></div>
+      </form>
+      <div id="contact-done" hidden>
+        <p class="thanks">Thanks — we'll be in touch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="sec sec-footer">
+  <div class="wrap">
+    <div class="row">
+      <a class="vc-logo" href="#top" aria-label="Vandercar, back to top"><i class="cube" aria-hidden="true"></i><i class="word" aria-hidden="true"></i></a>
+      <nav aria-label="Footer">
+        <a href="#capabilities">Capabilities</a><a href="#projects">Work</a><a href="#process">Process</a><a href="#about">Company</a><a href="#team">Team</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="legal">
+      <span>© 2026 Vandercar, LLC · Cincinnati, Ohio</span>
+      <a href="/ada-policy/">ADA Policy</a><a href="/privacy-policy/">Privacy Policy</a>
+      <a href="#top" class="top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // count-up
+  var nums=document.querySelectorAll('#numbers .num');
+  function run(el){
+    var to=+el.getAttribute('data-to'),suf=el.getAttribute('data-suffix')||'',plain=el.getAttribute('data-plain');
+    var start=plain?to-60:0,t0=null,d=1400;
+    function step(t){
+      if(t0===null)t0=t;
+      var p=Math.min((t-t0)/d,1),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(start+(to-start)*e)+suf;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if(nums.length&&!reduce&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){io.unobserve(en.target);run(en.target);}});
+    },{threshold:.4});
+    nums.forEach(function(n){io.observe(n);});
+  }
+  // copy
+  var btn=document.getElementById('contact-copy'),em=document.getElementById('contact-email'),msg=document.getElementById('contact-copied');
+  if(btn&&em){
+    btn.addEventListener('click',function(){
+      function sel(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);if(msg)msg.textContent='Selected — press copy';}
+      try{
+        navigator.clipboard.writeText(em.textContent).then(function(){if(msg)msg.textContent='Copied';},sel);
+      }catch(e){sel();}
+    });
+  }
+  // form
+  var f=document.getElementById('contact-form');
+  if(f){
+    var err=document.getElementById('contact-err'),done=document.getElementById('contact-done');
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var n=document.getElementById('contact-name'),m=document.getElementById('contact-mail');
+      if(!n.value.trim()){err.textContent='Please enter your name.';n.focus();return;}
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim())){err.textContent='Please enter a valid email address.';m.focus();return;}
+      err.textContent='';
+      var b=document.getElementById('contact-submit');b.disabled=true;b.textContent='Sending…';
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+        .then(function(r){if(!r.ok)throw r;f.hidden=true;done.hidden=false;})
+        .catch(function(){err.textContent='Something went wrong. Please email info@vanhold.com or call 513.272.1700.';b.disabled=false;b.textContent='Send';});
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var nav=document.getElementById('nav');
+  var burger=nav.querySelector('.burger');
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>12)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  // reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=((i%6)*60)+'ms';io.observe(el)});
+  // active nav
+  var links=Array.prototype.slice.call(nav.querySelectorAll('ul a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
+  var navTick=0;
+  function navCalc(){navTick=0;var line=window.innerHeight*0.4,id=null;
+    secs.forEach(function(s){if(s.getBoundingClientRect().top<=line)id=s.id});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2)id=secs[secs.length-1].id;
+    links.forEach(function(a){a.classList.toggle('active',!!id&&a.getAttribute('href')==='#'+id)})}
+  function navS(){if(!navTick){navTick=1;requestAnimationFrame(navCalc)}}
+  window.addEventListener('scroll',navS,{passive:true});window.addEventListener('resize',navS,{passive:true});navCalc();
+})();
+</script>
+
+</body></html>
