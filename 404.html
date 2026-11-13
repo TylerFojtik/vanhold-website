@@ -20,6 +20,11 @@
 <h1>That page has moved</h1>
 <p>We rebuilt our website and this address no longer exists. Everything now lives on one page.</p>
 <p><a href="/">Go to the Vandercar home page</a> or <a href="/#contact">get in touch</a>.</p>
+<script>
+// Old site sections that have no page of their own still land somewhere useful.
+(function(){var p=location.pathname,m=[['/our-company/our-team','#team'],['/our-company','#about'],['/our-projects','#projects'],['/contact','#contact']];
+for(var i=0;i<m.length;i++)if(p.indexOf(m[i][0])===0){location.replace('/'+m[i][1]);return}})();
+</script>
 </div></main>
 <footer><div class="wrap"><span>&copy; 2026 Vandercar, LLC &middot; 5027 Madison Road, Cincinnati, OH 45227</span><a href="/">Home</a><a href="/ada-policy/">ADA Policy</a><a href="/privacy-policy/">Privacy Policy</a></div></footer>
 </body>

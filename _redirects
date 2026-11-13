@@ -1,8 +1,0 @@
-# Old vanhold.com addresses (Legend WebWorks site) -> sections of the new one-page site.
-# Netlify matches these with or without a trailing slash. Most specific rules first.
-/home                           /            301
-/our-company/our-team/*         /#team       301
-/our-company/company-history/*  /#about      301
-/our-company/*                  /#about      301
-/our-projects/*                 /#projects   301
-/contact/*                      /#contact    301
