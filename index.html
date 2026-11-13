@@ -631,9 +631,11 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
       <div class="mail"><a id="contact-email" href="mailto:info@vanhold.com">info@vanhold.com</a><button type="button" id="contact-copy">Copy</button><span id="contact-copied" class="note" role="status"></span></div>
     </div>
     <div class="reveal">
-      <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-        <input type="hidden" name="form-name" value="contact">
-        <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="b1949f14-e85d-49d8-acc9-eda76feb8c26">
+        <input type="hidden" name="subject" value="New inquiry from vanhold.com">
+        <input type="hidden" name="from_name" value="vanhold.com contact form">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
         <div><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
         <div><label for="contact-company">Company</label><input id="contact-company" name="company" type="text" autocomplete="organization"></div>
         <div><label for="contact-mail">Email</label><input id="contact-mail" name="email" type="email" autocomplete="email" required></div>
@@ -710,8 +712,10 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim())){err.textContent='Please enter a valid email address.';m.focus();return;}
       err.textContent='';
       var b=document.getElementById('contact-submit');b.disabled=true;b.textContent='Sending…';
-      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-        .then(function(r){if(!r.ok)throw r;f.hidden=true;done.hidden=false;})
+      // Web3Forms emails the submission; the visitor's address becomes the reply-to.
+      fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))})
+        .then(function(r){return r.json()})
+        .then(function(j){if(!j.success)throw j;f.hidden=true;done.hidden=false;})
         .catch(function(){err.textContent='Something went wrong. Please email info@vanhold.com or call 513.272.1700.';b.disabled=false;b.textContent='Send';});
     });
   }
