@@ -500,7 +500,9 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
 #contact textarea{min-height:110px;resize:vertical}
 #contact select option{background:var(--surface);color:var(--fg)}
 #contact input:focus,#contact select:focus,#contact textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
-#contact .err{color:var(--accent);font-size:14px;min-height:1em;margin:0}
+#contact .err{color:var(--accent);font-size:14px;line-height:1.6;min-height:3.2em;margin:0} /* room for two lines so Send never jumps */
+#contact input::placeholder{color:var(--fg-muted);opacity:.6}
+#contact [aria-invalid="true"]{border-bottom:2px solid #D64545}
 #contact .thanks{font-family:var(--font-display);font-size:clamp(26px,3vw,36px);margin:0}
 #contact .thanks-note{font-size:13px;margin-top:8px}
 @media(min-width:900px){#contact .cols{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:88px}}
@@ -638,8 +640,8 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
         <div><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
         <div><label for="contact-company">Company</label><input id="contact-company" name="company" type="text" autocomplete="organization"></div>
-        <div><label for="contact-mail">Email</label><input id="contact-mail" name="email" type="email" autocomplete="email" required></div>
-        <div><label for="contact-phone">Phone</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div><label for="contact-mail">Email</label><input id="contact-mail" name="email" type="email" autocomplete="email" placeholder="name@company.com" required></div>
+        <div><label for="contact-phone">Phone</label><input id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(513) 555-0123" maxlength="14"></div>
         <div><label for="contact-role">I am a…</label>
           <select id="contact-role" name="role"><option>Landowner</option><option>Municipality</option><option>Tenant / user</option><option>Capital partner</option><option>Broker</option><option>Other</option></select></div>
         <div><label for="contact-site">Tell us about the site</label><textarea id="contact-site" name="site"></textarea></div>
@@ -705,11 +707,23 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
   var f=document.getElementById('contact-form');
   if(f){
     var err=document.getElementById('contact-err'),done=document.getElementById('contact-done');
+    var m=document.getElementById('contact-mail'),ph=document.getElementById('contact-phone');
+    // US numbers only: keep 10 digits (a leading 1 is dropped) and show them as (513) 555-0123 while typing.
+    function digits(){return ph.value.replace(/\D/g,'').replace(/^1/,'')}
+    ph.addEventListener('input',function(){var d=digits().slice(0,10);
+      ph.value=d.length<4?d:d.length<7?'('+d.slice(0,3)+') '+d.slice(3):'('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6)});
+    function phoneMsg(){var d=digits();return !ph.value||/^[2-9]\d{2}[2-9]\d{6}$/.test(d)?'':'Please enter a 10-digit phone number, like (513) 272-1700.'}
+    function emailMsg(){return /^[^\s@]+@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/i.test(m.value.trim())?'':'Please enter a valid email address, like name@company.com.'}
+    // Flag a bad email or phone as soon as the visitor leaves the field, not only on Send.
+    [[m,emailMsg],[ph,phoneMsg]].forEach(function(x){x[0].addEventListener('blur',function(){if(!x[0].value)return;var msg=x[1]();
+      if(msg){x[0].setAttribute('aria-invalid','true');err.textContent=msg}else if(x[0].getAttribute('aria-invalid')){x[0].removeAttribute('aria-invalid');err.textContent=''}})});
     f.addEventListener('submit',function(e){
       e.preventDefault();
-      var n=document.getElementById('contact-name'),m=document.getElementById('contact-mail');
-      if(!n.value.trim()){err.textContent='Please enter your name.';n.focus();return;}
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim())){err.textContent='Please enter a valid email address.';m.focus();return;}
+      var n=document.getElementById('contact-name');
+      m.value=m.value.trim();
+      var bad=!n.value.trim()?[n,'Please enter your name.']:emailMsg()?[m,emailMsg()]:phoneMsg()?[ph,phoneMsg()]:null;
+      [n,m,ph].forEach(function(el){el.removeAttribute('aria-invalid')});
+      if(bad){bad[0].setAttribute('aria-invalid','true');err.textContent=bad[1];bad[0].focus();return;}
       err.textContent='';
       var b=document.getElementById('contact-submit');b.disabled=true;b.textContent='Sending…';
       // Web3Forms emails the submission; the visitor's address becomes the reply-to.
