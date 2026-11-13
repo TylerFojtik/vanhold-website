@@ -479,7 +479,7 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
 #partners h3{font-size:26px;margin:0 0 10px}
 #partners p{margin:0;color:var(--fg-muted);line-height:1.55}
 @media(min-width:800px){#partners .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}}
-#contact{padding:clamp(64px,10vw,140px) 0;background:var(--bg)}
+#contact{padding:clamp(64px,10vw,140px) 0 clamp(48px,6vw,80px);background:var(--bg)}
 #contact .cols{display:grid;gap:48px;grid-template-columns:minmax(0,1fr)}
 #contact h2{font-size:clamp(34px,5vw,60px);margin:12px 0 20px}
 #contact p{color:var(--fg-muted);line-height:1.6;max-width:46ch}
@@ -495,7 +495,9 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
 #contact textarea{min-height:110px;resize:vertical}
 #contact select option{background:var(--surface);color:var(--fg)}
 #contact input:focus,#contact select:focus,#contact textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
-#contact .err{color:var(--accent);font-size:14px;line-height:1.6;min-height:3.2em;margin:0} /* room for two lines so Send never jumps */
+#contact .send{margin-top:6px}
+#contact .err{color:var(--accent);font-size:14px;line-height:1.6;margin:-6px 0 0}
+#contact .err:empty{display:none}
 #contact input::placeholder{color:var(--fg-muted);opacity:.6}
 #contact [aria-invalid="true"]{border-bottom:2px solid #D64545}
 #contact .thanks{font-family:var(--font-display);font-size:clamp(26px,3vw,36px);margin:0}
@@ -640,8 +642,8 @@ else{items.forEach(function(l){l.classList.add('on')});fill.style.display='none'
         <div><label for="contact-role">I am a…</label>
           <select id="contact-role" name="role"><option>Landowner</option><option>Municipality</option><option>Tenant / user</option><option>Capital partner</option><option>Broker</option><option>Other</option></select></div>
         <div><label for="contact-site">Tell us about the site</label><textarea id="contact-site" name="site"></textarea></div>
+        <div class="send"><button type="submit" class="btn btn-primary" id="contact-submit">Send</button></div>
         <p class="err" id="contact-err" role="alert"></p>
-        <div><button type="submit" class="btn btn-primary" id="contact-submit">Send</button></div>
       </form>
       <div id="contact-done" hidden>
         <p class="thanks">Thanks — we'll be in touch.</p>
